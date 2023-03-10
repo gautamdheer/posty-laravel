@@ -1,14 +1,14 @@
-Laravel Project Readme
+## Laravel Project Readme
 This Laravel project provides a simple yet powerful user authentication system with features like user registration, login, and logout. Additionally, it offers post liking and disliking functionality to the users.
 
-Requirements
+## Requirements
 To run this project, you must have the following installed on your system:
 
 PHP 7.4 or later
 Composer
 MySQL or any other compatible database
 
-Installation
+## Installation
 Follow the steps below to get started with the project:
 
 Clone the repository to your local machine using git clone.
@@ -25,5 +25,5 @@ Once logged in, you will be taken to the home page that displays a list of posts
 
 When you are done, you can log out by clicking the Logout button.
 
-License
+## License
 This project is licensed under the MIT License. See the LICENSE file for details.
