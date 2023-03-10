@@ -7,6 +7,7 @@ To run this project, you must have the following installed on your system:
 PHP 7.4 or later
 Composer
 MySQL or any other compatible database
+
 Installation
 Follow the steps below to get started with the project:
 
