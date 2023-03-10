@@ -1,4 +1,4 @@
-## Laravel Project Readme
+## Laravel Project Posty
 This Laravel project provides a simple yet powerful user authentication system with features like user registration, login, and logout. Additionally, it offers post liking and disliking functionality to the users.
 
 ## Requirements
