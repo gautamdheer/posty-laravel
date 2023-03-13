@@ -2,6 +2,7 @@
 
 use Auth\RegisterController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
@@ -27,5 +28,10 @@ Route::post('/logout', 'App\Http\Controllers\Auth\LogoutController@store')->name
 Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index')
     ->name('dashboard')
     ->middleware('auth');
+
+// posts 
+    Route::get('/posts', 'App\Http\Controllers\PostController@index')->name('posts');
+    Route::post('/posts', 'App\Http\Controllers\PostController@store');
+    
 
  
