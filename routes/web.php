@@ -3,6 +3,7 @@
 use Auth\RegisterController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\PostLikeController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
@@ -32,6 +33,8 @@ Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index')
 // posts 
     Route::get('/posts', 'App\Http\Controllers\PostController@index')->name('posts');
     Route::post('/posts', 'App\Http\Controllers\PostController@store');
-    
+     
+    Route::post('/posts/{post}/likes', 'App\Http\Controllers\PostLikeController@store')->name('posts.likes');
+    Route::delete('/posts/{post}/likes', 'App\Http\Controllers\PostLikeController@destory')->name('posts.likes');
 
  

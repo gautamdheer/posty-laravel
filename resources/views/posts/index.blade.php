@@ -35,15 +35,18 @@
 
 
                     <div class="flex item-center mb-4">
-                        <form action="" class="mr-1">
-                            @csrf
-                            <button type="submit" class="text-blue-500">Likes</button>
-                        </form>
-                        <form action="" class="mr-1">
-                            @csrf
-                            <button type="submit" class="text-blue-500">Dislikes</button>
-                        </form>
-
+                      @if(!$post->likedBy(auth()->user()))
+                            <form action="{{route('posts.likes', $post) }}" method="POST" class="mr-1">
+                                @csrf
+                                <button type="submit" class="text-blue-500">Likes</button>
+                            </form>
+                        @else
+                            <form action="{{route('posts.likes', $post) }}" method="POST" class="mr-1">
+                                @csrf
+                                @method('delete')
+                                <button type="submit" class="text-blue-500">Dislikes</button>
+                            </form>
+                        @endif
                         <span>{{ $post->likes->count() }} {{ Str::plural('like', $post->likes->count()) }}</span>
                     </div>
                 @endforeach
